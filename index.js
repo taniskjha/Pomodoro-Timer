@@ -45,7 +45,7 @@ countdown = setInterval(() => {
         clearInterval(countdown);
         return;
     }  
-   displayTimeLeft(secondsLeft)
+   displayTimeLeft(secondsLeft);
 
 },1000);
 
@@ -115,11 +115,16 @@ function setTimer() {
   // creating a submit event listener on form
 
   form.addEventListener('submit', function(e) {
-      e.preventDefault();  //  prevent it from submitting a form after  Clicking on a "Submit" button,
+      e.preventDefault();  
+      //  prevent it from submitting a form after  Clicking on a "Submit" button,
+
+     // Prevent a submit button from submitting a form
+         
+
+        //Prevent a link from following the URL
 
       const mins = this.minutes.value;
       timer(mins * 60); // multiplying minutes by 60 to convert in seconds
       
-
 
   })
